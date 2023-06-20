@@ -62,7 +62,7 @@ func exibeOpcoes() {
 }
 
 func epp() {
-	epp := "$SapQa0809"
+	epp := "1234"
 	fmt.Println("A senha atual do SAP EPP:", epp)
 	clip(epp)
 	msg()
@@ -70,7 +70,7 @@ func epp() {
 	limpaTela()
 }
 func prd() {
-	prd := "$Golang0809!@#$2"
+	prd := "1234"
 	fmt.Println("A senha atual do SAP PRD:", prd)
 	clip(prd)
 	msg()
@@ -79,7 +79,7 @@ func prd() {
 }
 
 func epd() {
-	epd := "$SapEPD0809!@#"
+	epd := "1234"
 	fmt.Println("A senha atual do SAP EPD:", epd)
 	clip(epd)
 	msg()
@@ -105,7 +105,7 @@ func emonitorPrd() {
 }
 
 func ahgora() {
-	senhaAhgora := "!@#VgJr0809!@#7"
+	senhaAhgora := "1234"
 	fmt.Println("A senha atual do app Ahgora:", senhaAhgora)
 	clip(senhaAhgora)
 	msg()
