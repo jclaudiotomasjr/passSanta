@@ -15,7 +15,6 @@ const halt = 2
 var clear map[string]func()
 
 func intro() {
-
 	var nome string
 	fmt.Println("Digite seu nome:")
 	fmt.Scan(&nome)
@@ -41,7 +40,7 @@ func carregaComando() int {
 	}
 
 	var comandoCarregado int
-	fmt.Print("Digite seu comando: ")
+	fmt.Println("Digite seu comando: ")
 	fmt.Scan(&comandoCarregado)
 	fmt.Println("Comando Digitado ", comandoCarregado, "\n ")
 	return comandoCarregado
@@ -62,7 +61,7 @@ func exibeOpcoes() {
 }
 
 func epp() {
-	epp := "1234"
+	epp := "$SapQa08093"
 	fmt.Println("A senha atual do SAP EPP:", epp)
 	clip(epp)
 	msg()
@@ -70,7 +69,7 @@ func epp() {
 	limpaTela()
 }
 func prd() {
-	prd := "1234"
+	prd := "$SapPrd08093"
 	fmt.Println("A senha atual do SAP PRD:", prd)
 	clip(prd)
 	msg()
@@ -79,7 +78,7 @@ func prd() {
 }
 
 func epd() {
-	epd := "1234"
+	epd := "$SapEPD08093"
 	fmt.Println("A senha atual do SAP EPD:", epd)
 	clip(epd)
 	msg()
@@ -87,7 +86,7 @@ func epd() {
 	limpaTela()
 }
 func coldWebPrd() {
-	cold := "1234"
+	cold := ""
 	fmt.Println("A senha atual do e-coldWeb PRD:", cold)
 	clip(cold)
 	msg()
@@ -105,7 +104,7 @@ func emonitorPrd() {
 }
 
 func ahgora() {
-	senhaAhgora := "1234"
+	senhaAhgora := "!@#VgJr0809!@#9"
 	fmt.Println("A senha atual do app Ahgora:", senhaAhgora)
 	clip(senhaAhgora)
 	msg()
@@ -123,9 +122,9 @@ func limpaTela() {
 	}
 }
 
-func clip(text string) {
-	clpBd := text
-	err := clipboard.WriteAll(clpBd)
+func clip(pass string) {
+	clipbd := pass
+	err := clipboard.WriteAll(clipbd)
 	if err != nil {
 		fmt.Println("Erro ao copiar senha", err)
 		return

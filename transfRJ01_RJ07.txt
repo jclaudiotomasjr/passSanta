@@ -1,0 +1,26 @@
+Transferência RJ01 -> RJ07:
+LM77 Gravar o centro sem fila
+
+1  -> Saída no centro RJ01
+
+    2  -> ZWM0567P - Carga da lista de materiais para transferência (retirada de palete/excesso)
+    3  -> ZWM0568P - Criar as OTs de retirada do estoque (retirada palete/excesso)
+    4  -> ZWM0137P - Gerar código da gaiola
+    5  -> Separação (retirada física do estoque)
+        -> 5.1 ZWM0570P -> Separação coletor orientado pelas OTs (OTs de retirada palete/excesso)
+        -> 5.2 ZWM0571P -> Separação coletor sem orientação / seleção manual (picking – FRK/PRT)
+    6  -> ZWM0572P -> Emitir etiqueta da gaiola
+    7  -> ZWM0574P -> Gerar lacre de embarque
+    8  -> ZWM0575P -> Carregamento das gaiolas no lacre
+    9  -> ZMM1107 -> Cockpit para Saída de mercadoria (pedido/remessa/fatura/minuta)
+    
+10 -> Entrada no centro RJ07
+
+    11 -> ZMM0191 -> Validação Fiscal
+    12 -> ZMM0116NP -> Entrada NF - Recebimento
+    13 -> ZMM0564P -> Minuta de Recebimento
+    14 -> ZMM0099P -> Recebimento da mercadoria
+    15 -> Armazenagem física no destino
+        -> 15.1 ZWM0644P -> Armazenagem de caixas no excesso
+        -> 15.2 ZWM0645P -> Armazenagem de fração na posição fixa(FRK/PRT)
+
