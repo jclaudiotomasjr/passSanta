@@ -100,7 +100,7 @@ José Claudio Tomas Junior
 
 ## 📄 Licença
 
-Este projeto é destinado para uso interno e fins de automação operacional.
+Este projeto é destinado para uso interno e fins de automação operacional no uso do SAP GUI.
 
 ---
 
