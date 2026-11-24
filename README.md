@@ -96,7 +96,7 @@ passSanta/
 José Claudio Tomas Junior
 
 - 🔗 GitHub: https://github.com/jclaudiotomasjr
-- 🔗 LinkedIn: www.linkedin.com/in/jose-claudio-tomas-junior
+- 🔗 LinkedIn: www.linkedin.com/in/claudiojtomassap
 
 ## 📄 Licença
 
