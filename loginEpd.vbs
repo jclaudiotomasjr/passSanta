@@ -1,7 +1,7 @@
 
 user  = GetEnvValue("C:\senhas\.env", "USER")
 senha = GetEnvValue("C:\senhas\.env", "SAP_EPD")
-
+entry = GetEnvValue("C:\senhas\.env", "ENTRY_EPD")
 
 If Not IsObject(application) Then
    Set SapGuiAuto  = GetObject("SAPGUI")
@@ -9,7 +9,7 @@ If Not IsObject(application) Then
 End If
 WScript.Sleep 1000 
 If Not IsObject(connection) Then
-   Set connection = application.OpenConnection("SAP EPD", True)
+   Set connection = application.OpenConnection(entry, True)
 End If
 WScript.Sleep 1000 
 If Not IsObject(session) Then

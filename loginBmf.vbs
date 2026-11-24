@@ -1,6 +1,6 @@
 user  = GetEnvValue("C:\senhas\.env", "GP_USER")
 senha = GetEnvValue("C:\senhas\.env", "SAP_GP")
-
+entry = GetEnvValue("C:\senhas\.env", "ENTRY_GP")
 
 
 If Not IsObject(application) Then
@@ -8,7 +8,7 @@ If Not IsObject(application) Then
    Set application = SapGuiAuto.GetScriptingEngine
 End If
 If Not IsObject(connection) Then
-   Set connection = application.OpenConnection("BMF [ecc1.ddns.net]", True)
+   Set connection = application.OpenConnection(entry, True)
 End If
 If Not IsObject(session) Then
   Set session    = connection.Children(0)

@@ -1,13 +1,14 @@
 
 user  = GetEnvValue("C:\senhas\.env", "USER")
 senha = GetEnvValue("C:\senhas\.env", "SAP_EPH")
+entry = GetEnvValue("C:\senhas\.env", "ENTRY_EPH")
 
 If Not IsObject(application) Then
    Set SapGuiAuto  = GetObject("SAPGUI")
    Set application = SapGuiAuto.GetScriptingEngine
 End If
 If Not IsObject(connection) Then
-   Set connection = application.OpenConnection("SAP EPH", True)
+   Set connection = application.OpenConnection(entry, True)
 End If
 If Not IsObject(session) Then
    Set session    = connection.Children(0)
