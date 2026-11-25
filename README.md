@@ -49,10 +49,11 @@ go run .
 Para gerar o executável:
 
 ```bash
-go build -o passSanta.exe
+go build senhas.go
 ```
 
 O executável será criado na pasta atual.
+
 
 ## 🔒 Segurança
 
