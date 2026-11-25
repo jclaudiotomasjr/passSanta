@@ -3,7 +3,7 @@
 
 Aplicação desenvolvida em Go para facilitar o gerenciamento e a recuperação rápida de senhas utilizadas no dia a dia operacional usuário SAP.
 
-O objetivo da ferramenta é permitir que o usuário selecione uma senha pré-configurada, não precise ficar digitando usuário e senha no SAP gui, e caso precise copie automaticamente a senha para a área de transferência e a utilize em processos de autenticação sem a necessidade de digitação manual.
+O objetivo da ferramenta é gerenciamento de senhas, permitir que o usuário selecione uma senha pré-configurada, não precise ficar digitando usuário e senha no SAP gui, e caso precise copie automaticamente a senha para a área de transferência e a utilize em processos de autenticação sem a necessidade de digitação manual.
 
 ## ✨ Funcionalidades
 
@@ -41,7 +41,7 @@ go mod tidy
 Execute a aplicação:
 
 ```bash
-go run .
+go run senhas.go
 ```
 
 ## 📦 Build
@@ -101,7 +101,7 @@ José Claudio Tomas Junior
 
 ## 📄 Licença
 
-Este projeto é destinado para uso interno e fins de automação operacional no uso do SAP GUI.
+Este projeto é destinado para uso gerenciamento de senhas e fins de automação operacional no uso do SAP GUI.
 
 ---
 
