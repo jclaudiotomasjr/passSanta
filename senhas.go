@@ -61,7 +61,7 @@ func exibeOpcoes() {
 	fmt.Println("7  - Senha SAP PRD")
 	fmt.Println("8  - Senha SAP EPD")
 	fmt.Println("9  - Script BMF")
-	fmt.Println("10 - Robot")
+	fmt.Println("10 - GSC")
 	fmt.Println("0  - Sair do Programa")
 	fmt.Println("****************************************\n ")
 }
@@ -136,30 +136,17 @@ func ScriptBmf() {
 	limpaTela()
 }
 
-func Robot() {
-	cmd := exec.Command("./rb.exe", "arg1", "arg2")
-
-	cmd.Stdout = os.Stdout
-	cmd.Stderr = os.Stderr
-
-	err := cmd.Start()
-	if err != nil {
-		fmt.Println("Erro ao executar:", err)
-	}
-
-	time.Sleep(5 * time.Second)
-
-	res := carregaComandoKill()
-
-	if res != "S" {
-		// Finaliza o processo
-		cmd.Process.Kill()
-		fmt.Println("Processo finalizado com sucesso.")
-	}
+func GSC() {
+	gsc := os.Getenv("GSC")
+	fmt.Println("A senha atual do SAP EPD:", gsc)
+	clip(gsc)
+	msg()
+	time.Sleep(time.Second * halt)
+	limpaTela()
 
 }
 
-func carregaComandoKill() string {
+/*func carregaComandoKill() string {
 	var clear = make(map[string]func())
 	clear["linux"] = func() {
 		cmd := exec.Command("clear")
@@ -266,7 +253,7 @@ func main() {
 		case 9:
 			ScriptBmf()
 		case 10:
-			Robot()
+			GSC()
 		case 0:
 			fmt.Println("Saindo do Programa.")
 			os.Exit(0)
